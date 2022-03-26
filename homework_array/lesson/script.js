@@ -6,18 +6,17 @@ incrementElements([2, 4, 6, 8]) ➞ [3, 5, 7, 9]
 
 incrementElements([-1, -2, -3, -4]) ➞ [0, -1, -2, -3] */
 
- /*function adding(num1, num2, num3, num4){
-     var array = [num1, num2, num3, num4];
-     for (var i = 0; i < array.length; i++){
-         array[i]++;
+ function incrementElements(arr1){
+     for (var i = 0; i < arr1.length; i++){
+         arr1[i]++;
      } 
-     return array;
+     return arr1;
  }
 
 
-console.log(adding(0, 1, 2, 3))
-console.log(adding(2, 4, 6, 8))
-console.log(adding(-1, -2, -3, -4))*/
+console.log(incrementElements([0, 1, 2, 3]));
+console.log(incrementElements([2, 4, 6, 8]));
+console.log(incrementElements([-1, -2, -3, -4]));
 
 
 
@@ -32,18 +31,14 @@ console.log(adding(-1, -2, -3, -4))*/
 // reverse([]) ➞ []
 
 
-function reverse(){
-  var array2 = [];
-  for (var i = 0; i < array2.length; i++){
-      array2.push(other[i])
-  }
-  array2.reverse();
-  return array2;
+function reverse(arr2){
+  arr2.reverse();
+  return arr2;
 }
 
-console.log(reverse(1,2,3,4))
-console.log(reverse(9,9,2,3,4))
-console.log(reverse())
+console.log(reverse([1, 2, 3, 4]));
+console.log(reverse([9, 9, 2, 3, 4]));
+console.log(reverse([]));
 
 
 
@@ -60,4 +55,14 @@ console.log(reverse())
 
 //* Первый массив всегда состоит из двух элементов.
 
+ function tuckIn(arr3, arr4){
+    arr2.push(arr3[1]);
+    arr2.unshift(arr3[0]);
+    return arr4;
+ }
+
+ 
+
+ console.log(tuckIn([[1, 2], [5, 6]], [[3, 4]]));
+ console.log(tuckIn([15,150], [45, 75, 35]));
  
