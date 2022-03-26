@@ -16,7 +16,7 @@ do{
 } while (patronymic === '');
 
 
-var age
+var age;
 do{
     age = parseInt(prompt('Введите ваш возраст в годах', ''));
 } while (isNaN(age));
@@ -31,6 +31,7 @@ if (gender == true){
 else{
     gender = 'женский';
 }
+
 
 var retire;
 if ((age >= 58) && (gender === 'женский')) {

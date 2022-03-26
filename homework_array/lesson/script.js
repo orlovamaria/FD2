@@ -32,9 +32,9 @@ console.log(adding(-1, -2, -3, -4))*/
 // reverse([]) ➞ []
 
 
-function reverse(other){
-  var array2 = [other];
-  for (var i = 0; i < other.length; i++){
+function reverse(){
+  var array2 = [];
+  for (var i = 0; i < array2.length; i++){
       array2.push(other[i])
   }
   array2.reverse();
