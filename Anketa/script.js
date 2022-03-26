@@ -1,20 +1,26 @@
-
+var surname;
 do{
-    var surname = prompt('Введите вашу фамилию', ''); 
+    surname = prompt('Введите вашу фамилию', ''); 
 } while (surname === '');
 
+
+var name;
 do{
-    var name = prompt('Введите ваше имя', '');
+    name = prompt('Введите ваше имя', '');
 } while (name === '');
 
+
+var patronymic;
 do{
-    var patronymic = prompt('Введите ваше отчество', '');
+    patronymic = prompt('Введите ваше отчество', '');
 } while (patronymic === '');
 
 
+var age
 do{
-    var age = parseInt(prompt('Введите ваш возраст в годах', ''));
+    age = parseInt(prompt('Введите ваш возраст в годах', ''));
 } while (isNaN(age));
+
 
 var age_days = age * 365;
 var age_future = age + 5;
