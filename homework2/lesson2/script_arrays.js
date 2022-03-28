@@ -47,24 +47,24 @@ numberSplit(11) ➞ [5, 6]
 numberSplit(-9) ➞ [-5, -4]
  */
 
-// function numberSplit(num){
-//       var array = [];
-//       if (num % 2 == 0){
-//           array.push(num/2);
-//           array.push(num/2);
-//       }
-//       else if(num < 0){
-//         array.push((num/2) - 0.5);
-//         array.push((num/2) + 0.5);
-//       }
-//       else{
-//         array.push(parseInt(num/2));
-//         array.push((num/2) + 0.5);
-//       }
-//       return array;
-// }
+function numberSplit(num){
+      var array = [];
+      if (num % 2 == 0){
+          array.push(num/2);
+          array.push(num/2);
+      }
+      else if(num < 0){
+        array.push((num/2) - 0.5);
+        array.push((num/2) + 0.5);
+      }
+      else{
+        array.push(parseInt(num/2));
+        array.push((num/2) + 0.5);
+      }
+      return array;
+}
 
-// console.log(numberSplit(4));
-// console.log(numberSplit(10));
-// console.log(numberSplit(11));
-// console.log(numberSplit(-9));
+console.log(numberSplit(4));
+console.log(numberSplit(10));
+console.log(numberSplit(11));
+console.log(numberSplit(-9));
