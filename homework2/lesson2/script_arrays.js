@@ -53,7 +53,7 @@ function numberSplit(num){
           array.push(num/2);
           array.push(num/2);
       }
-      else if(num < 0){
+      else if((num < 0) && (num % 2 != 0)) {
         array.push((num/2) - 0.5);
         array.push((num/2) + 0.5);
       }
@@ -68,3 +68,4 @@ console.log(numberSplit(4));
 console.log(numberSplit(10));
 console.log(numberSplit(11));
 console.log(numberSplit(-9));
+console.log(numberSplit(-10));
