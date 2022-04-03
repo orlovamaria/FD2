@@ -37,6 +37,22 @@ function treeSum(array){
 
 
 // Task 2
+// 1 способ
+function removeLeadingTrailing(str){
+    return +str.toString()
+}
+
+console.log(removeLeadingTrailing("190.000"))
+console.log(removeLeadingTrailing("00803"))
+console.log(removeLeadingTrailing("07.1200"))
+console.log(removeLeadingTrailing("90"))
+console.log(removeLeadingTrailing("00000"))
+console.log(removeLeadingTrailing("0.0"))
+console.log(removeLeadingTrailing("00.00"))
+console.log(removeLeadingTrailing("0"))
+console.log(removeLeadingTrailing("4.0"))
+
+// 2 способ
 
 function removeLeadingTrailing(str){
    var array = str.split('');
@@ -64,6 +80,7 @@ function removeLeadingTrailing(str){
 
    return array.join('');
 }
+
 
 console.log(removeLeadingTrailing("190.000"))
 console.log(removeLeadingTrailing("00803"))
