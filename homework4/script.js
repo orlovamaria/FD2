@@ -51,6 +51,7 @@ console.log(removeLeadingTrailing("0.0"))
 console.log(removeLeadingTrailing("00.00"))
 console.log(removeLeadingTrailing("0"))
 console.log(removeLeadingTrailing("4.0"))
+console.log(removeLeadingTrailing("00830"))
 
 // 2 способ
 

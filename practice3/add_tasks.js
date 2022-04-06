@@ -12,58 +12,6 @@
 
 //Числовой диапазон, который следует учитывать при поиске пропущенных чисел в массиве, - это последовательность последовательных чисел между минимальным и максимальным из чисел (включительно).
 
-// function sumMissingNumbers(array){
-//   var max = array[0];
-//   var min = array[0];
-//   var sumArray = 0;
-//   var arrInterval = 0;
-//   for(var i = 0; i <array.length; i++){
-//     if(array[i] > max){
-//       max = array[i];
-//     }
-//     if(array[i] < min){
-//       min = array[i];
-//     }
-//     sumArray += array[i];
-//   }
-//   for(var i = min; i <= max; i++){
-//       arrInterval += i;
-//   }
-//   return arrInterval - sumArray;
-// }
-
-// console.log(sumMissingNumbers([4, 3, 8, 1, 2]));
-
-
-// function sumMissingNumbers(array){
-//   var result = 0;
-//   array.sort((a,b) => a-b)
-//   var max = array[array.length - 1];
-//   var min = array[0];
-//   for(var i = min; i <= max; i++){
-//     if((array[i] +1) !== array[i]){
-//       result += (array[i] +1)
-//     }
-//   }
-//   return result;
-// }
-
-// console.log(sumMissingNumbers([4, 3, 8, 1, 2]));
-
-
-// function GetMissed(arr) {
-//   arr.sort((a,b) => a - b)
-
-//   let res = 0;
-
-//   for(let i = arr[0]; i<=arr[arr.length - 1]; i++) {
-//     if(arr.find(elem => elem === i) === undefined) res += i; 
-//   }
-
-//   return res;
-// }
-
-// console.log(GetMissed([4, 3, 8, 1, 2]));
 
 function GetMissed(arr) {
      arr.sort((a,b) => a - b)
@@ -85,6 +33,8 @@ function GetMissed(arr) {
   }
   
    console.log(GetMissed([4, 3, 8, 1, 2]));
+   console.log(GetMissed([17, 16, 15, 10, 11, 12]));
+   console.log(GetMissed([1, 2, 3, 4, 5]));
   
 
 
