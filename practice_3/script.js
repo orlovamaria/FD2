@@ -81,12 +81,68 @@ numInStr(["this is a test", "test1"]) ➞ ["test1"]
     { name: "Martin",  age: 16, budget: 1600 }
   ]) ➞ 62600 */
 
-  function getBudgets(array){
-      var sum = 0;
-      array.filter(function(elem){
-          return sum += elem.budget;
-      })
-      return sum;
+//   function getBudgets(array){
+//       var sum = 0;
+//       array.filter(function(elem){
+//           return sum += elem.budget;
+//       })
+//       return sum;
+//   }
+
+// console.log(getBudgets([
+//   { name: "John",  age: 21, budget: 29000 },
+//   { name: "Steve",  age: 32, budget: 32000 },
+//   { name: "Martin",  age: 16, budget: 1600 }
+// ]))
+// console.log(getBudgets([
+//   { name: "John", age: 21, budget: 23000 },
+//   { name: "Steve",  age: 32, budget: 40000 },
+//   { name: "Martin",  age: 16, budget: 2700 }
+// ]))
+
+
+/*  4.Напишите функцию, которая принимает массив объектов даты и возвращает «самую длинную полосу» (т. Е. Количество последовательных дней подряд).
+
+
+
+longestStreak([
+  {
+    "date": "2021-04-18"
+  },
+  {
+    "date": "2021-04-19"
+  },
+  {
+    "date": "2021-04-20"
+  },
+  {
+    "date": "2021-04-26"
+  },
+  {
+    "date": "2021-04-27"
+  },
+  {
+    "date": "2021-04-30"
   }
+]) ➞ 3
 
 
+Пустой массив должен возвращать 0.
+
+*/
+
+
+function doubleElement(str){
+  var array = str.split('');
+  for(var i = 0; i < array.length; i++){
+      array.splice(i+1, 0, array[i])
+  }
+//    array.forEach(function(elem, index){
+//        return array.splice(index, 0, elem);
+//    })
+
+return array;
+}
+console.log(doubleElement("String"))
+console.log(doubleElement("Hello World!"))
+console.log(doubleElement("1234!_ "))

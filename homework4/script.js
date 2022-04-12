@@ -82,7 +82,7 @@ function removeLeadingTrailing(str){
    return array.join('');
 }
 
-
+onsole.log(removeLeadingTrailing("7.012"))
 console.log(removeLeadingTrailing("190.000"))
 console.log(removeLeadingTrailing("00803"))
 console.log(removeLeadingTrailing("07.1200"))

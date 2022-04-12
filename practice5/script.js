@@ -45,16 +45,18 @@ isParticularArray([2, 7, 8, 4, 6, 1, 6, 3]) ➞ false
 
 
  */
-function isParticularArray(arr){
-    var result = arr.every(function(elem, index){
-           return !(index%2 || elem%2) || (elem%2 && index%2)
-    })
-    
-}
+// function isParticularArray(arr){
+//     var result = arr.every(function(elem, index){
+//         //    return !(index%2 || elem%2) || (elem%2 && index%2)
+//          return ((index%2==0 && elem%2==0) || (index%2!=0 && elem%2!=0))
+//     })
+//     return result;
+// }
 
-console.log(isParticularArray([2, 7, 4, 9, 6, 1, 6, 3]))
-console.log(isParticularArray([2, 7, 5, 1, 6, 1, 6, 3]))
-console.log(isParticularArray([2, 7, 8, 4, 6, 1, 6, 3]))
+// console.log(isParticularArray([2, 7, 4, 9, 6, 1, 6, 3]))
+// console.log(isParticularArray([2, 7, 5, 1, 6, 1, 6, 3]))
+// console.log(isParticularArray([2, 7, 8, 4, 6, 1, 6, 3]))
+// console.log(isParticularArray([2, 7, 8, 3, 6, 1, 6, 3, 8]))
 
 
 
@@ -80,38 +82,26 @@ testJackpot(["LL", "LL", "LL", "Ll", "LL"]) ➞ false
  */
 
 
-function testJackpot(arr){
-    var firstElem = arr[0];
-    var result = arr.every(function(elem){
-          return elem === firstElem;
-    })
-    return result;
-}
+// function testJackpot(arr){
+//     var firstElem = arr[0];
+//     var result = arr.every(function(elem){
+//           return elem === firstElem;
+//     })
+//     return result;
+// }
 
-console.log(testJackpot(["#", "#", "#", "#", "#"]))
-console.log(testJackpot(["xyz", "xyz", "xyz", "xyz", "xyz"]))
-console.log(testJackpot(["LL", "LL", "LL", "LL", "LL"]))
-console.log(testJackpot(["@@", "@", "@@@", "@@@@", "@@@@"]))
-console.log(testJackpot(["LL", "LL", "LL", "Ll", "LL"]))
-
-
+// console.log(testJackpot(["#", "#", "#", "#", "#"]))
+// console.log(testJackpot(["xyz", "xyz", "xyz", "xyz", "xyz"]))
+// console.log(testJackpot(["LL", "LL", "LL", "LL", "LL"]))
+// console.log(testJackpot(["@@", "@", "@@@", "@@@@", "@@@@"]))
+// console.log(testJackpot(["LL", "LL", "LL", "Ll", "LL"]))
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-/* 4. Напишите функцию, которая принимает массив пользователей arr, и возвращает массив пользователей отсортированный по возрастанию возраста. От самого юного до самого старшего */
+/* 4. Напишите функцию, которая принимает массив пользователей arr, и возвращает массив пользователей 
+отсортированный по возрастанию возраста. От самого юного до самого старшего */
 
 
 
@@ -153,12 +143,32 @@ console.log(testJackpot(["LL", "LL", "LL", "Ll", "LL"]))
         age: 37
     }
 ] */
+// var users = [
+//     {
+//         firstName: 'Alayah Mcgee',
+//         age: 37
+//     },
+//     {
+//        firstName: 'John Doe',
+//        age: 28
+//     },
+//     {
+//        firstName: 'Dev Bernard',
+//        age: 23
+//     },
+//     {
+//        firstName: 'Peter Johnson',
+//        age: 18
+//     }
+// ]
+// function sortUsers(arr){
+//      arr.sort(function(a,b){
+//          return a.age - b.age;
+//      })
+//      return arr;
+// }
 
-
-
-
-
-
+// console.log(sortUsers(users))
 
 
 
@@ -176,8 +186,17 @@ secondBigNumber([52, 18, 11, 16, 10]) ➞ 18
 Массив должен состоять минимум из 2 чисел.
 */
 
+// function secondBigNumber(arr){
+//      arr.sort(function(a,b){
+//          return a - b;
+//      })
+//      return arr[arr.length-2];
+// }
 
-
+// console.log(secondBigNumber([20, 80, 60, 40, 100]))
+// console.log(secondBigNumber([29, 198, 72, 13, 122]))
+// console.log(secondBigNumber([52, 18, 11, 16, 10]))
+// console.log(secondBigNumber([52, 18]))
 
 
 
@@ -203,18 +222,25 @@ sortArr([1, 2, 3, 4], "None") ➞ [1, 2, 3, 4]
  */
 
 
-// try catch!!!!!!!!!!!!!!
-
-// try{
-//     var num1 = 10;
-//     var num2 = 11;
-//     var sum = num1+ num2 + num3;
-// }catch(err){
-//     console.log('error!!!!')
-//     console.log(err)
-//     console.log(err.name)
-//     console.log(err.message)
+// function sortArr(arr, str){
+//     if(str == 'Asc'){
+//         arr.sort(function(a,b){
+//             return a - b;
+//         })
+//     }
+//     else if(str == 'Des'){
+//         arr.sort(function(a,b){
+//             return b - a;
+//         })
+//     }
+//     else if(str == 'None'){
+//         return arr;
+//     }
+//     return arr;
 // }
+// console.log(sortArr([5, 4, 3, 2], "Asc" ))
+// console.log(sortArr([6, 7, 10, 67], "Des"))
+// console.log(sortArr([1, 2, 3, 4], "None"))
 
 
 

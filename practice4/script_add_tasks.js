@@ -11,8 +11,20 @@
 
 
 
+// function doubleElement(str){
+//    var array = str.split('');
+//    for(var i = 0; i < array.length; i++){
+//        array.splice(i+1, 0, array[i])
+//    }
+// //    array.forEach(function(elem, index){
+// //        return array.splice(index, 0, elem);
+// //    })
 
-
+// return array;
+// }
+// console.log(doubleElement("String"))
+// console.log(doubleElement("Hello World!"))
+// console.log(doubleElement("1234!_ "))
 
 
 
