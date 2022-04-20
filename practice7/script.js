@@ -117,13 +117,13 @@ halloween(new Date("2019/10/12")) ➞ "Хеллоуин не сегодня:("
 
 // totalDays(2, 2001) ➞ 28
 
-function totalDays(month, year){
-    var result = new Date(year, month, 0);
-    return result.getDate()
+// function totalDays(month, year){
+//     var result = new Date(year, month, 0);
+//     return result.getDate()
     
-}
+// }
 
-console.log(totalDays(2, 2018))
-console.log(totalDays(4, 1994))
-console.log(totalDays(2, 2002))
-console.log(totalDays(2, 2001))
+// console.log(totalDays(2, 2018))
+// console.log(totalDays(4, 1994))
+// console.log(totalDays(2, 2002))
+// console.log(totalDays(2, 2001))
