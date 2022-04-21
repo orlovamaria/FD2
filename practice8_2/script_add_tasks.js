@@ -10,14 +10,26 @@
 //var place2 = new СurrentСoordinates(76,29);
 //place1.getFullIndo() ➞ "x = 76", "y = 29"
 
-
+// function СurrentСoordinates(x, y){
+//   this.x = x;
+//   this.y = y;
+//   this.getFullIndo = function(){
+//        return 'x = ' +  this.x + ', y = ' +  this.y
+//   }
+// }
+// var place1 = new СurrentСoordinates(1,2);
+// var place2 = new СurrentСoordinates(76,29);
+// console.log(place1.getFullIndo())
+// console.log(place2.getFullIndo())
 
 
 
 
 
 /*
-2. Ваша задача - создать класс Circle, который создает круг с радиусом, заданным аргументом. Построенные круги должны иметь два метода-геттера getArea() ((PI) * r^2) и getPerimeter() ((2 * PI) * r), которые дают  соответствующую площадь, так и периметр (окружности).
+2. Ваша задача - создать класс Circle, который создает круг с радиусом, заданным аргументом. 
+Построенные круги должны иметь два метода-геттера getArea() ((PI) * r^2) и getPerimeter() ((2 * PI) * r), 
+которые дают  соответствующую площадь, так и периметр (окружности).
 
 PI = 3.14
 
@@ -38,10 +50,22 @@ PI = 3.14
 
 // circle1.getPerimeter() ➞ 15.71
 
+// function Circle(r){
+//    this.r = r;
+//    this.getArea = function(){
+//       return ((Math.PI) * Math.pow(this.r, 2))
+//    }
+//    this.getPerimeter = function(){
+//      return ((2 * Math.PI) * this.r)
+//    }
+// }
 
-
-
-
+// var circle1 = new Circle(10);
+// var circle2 = new Circle(2.5);
+// console.log(circle1.getArea())
+// console.log(circle1.getPerimeter())
+// console.log(circle2.getArea())
+// console.log(circle2.getPerimeter())
 
 
 

@@ -18,21 +18,25 @@ a1.getInitials() ➞ "J.S"
 Убедитесь, что только первая буква каждого имени написана с заглавной буквы.
 */
 
-function Name(fname, lname){
-    var fname = fname;
-    var lname = lname;
-    this.getFullName = function(){
-        var currentFirstName = fname[0].toUpperCase()
-         + fname.toLowerCase().slice(1);
-        var currentLastName = lname[0].toUpperCase() 
-         + lname.toLowerCase().slice(1);
-        return currentFirstName + ' ' + currentLastName;
-    }
-}
-
-var a1 = new Name("john", "SMITH");
-//console.log(a1.getFullName());
-
+// function Name(fname, lname){
+//     var fname = fname;
+//     var lname = lname;
+//     this.getFullname = function(){
+//         var currentFirstName = fname[0].toUpperCase() + fname.toLowerCase().slice(1)
+//         var currentLastName = lname[0].toUpperCase() + lname.toLowerCase().slice(1)
+//         return currentFirstName + ' ' + currentLastName;
+//     }
+//     this.getInitials = function(){
+//         var upFname = fname[0].toUpperCase()
+//         var upLname = lname[0].toUpperCase()
+//         return upFname + '.' + upLname
+//     }
+// }
+// var a1 = new Name("john", "SMITH")
+// console.log(a1.fname)
+// console.log(a1.lname)
+// console.log(a1.getFullname())
+// console.log(a1.getInitials())
  
 
  
@@ -54,21 +58,29 @@ var currency = new CurrencyConverter(10);
 currency.getDollarCurrency() ➞ "3.97 $"
 currency.getEuroCurrency() ➞ "3.34 £"
 currency.getRubCurrency() ➞ "294.11 ₽"
-currency.getDollarCurrency1 ➞ undefined
+currency.getDollarCurrency ➞ undefined
 */
 
-function CurrencyConverter(currentBYN){
-    var currencyUSD = 2.52;
-    var currencyEuro = 2.99;
-    var currencyRub = 0.034;
-    var currentBYN = currentBYN;
-    var getDollarCurrency1 = (currentBYN / currencyUSD).toFixed(2) + ' $';
-
-    this.getDollarCurrency = function(){
-        return (currentBYN / currencyUSD).toFixed(2) + ' $';
-    }
-}
-
-var currency = new CurrencyConverter(10);
+// function CurrencyConverter(amountMoney){
+//     this.amountMoney = amountMoney;
+//    var currencyUSD = 2.52;
+//    var currencyEuro = 2.99;
+//    var currencyRub = 0.034;
+//    this.getDollarCurrency = function(){
+//        return (this.amountMoney / currencyUSD).toFixed(2) + ' $'
+//    }
+//    this.getEuroCurrency = function(){
+//     return (this.amountMoney / currencyEuro).toFixed(2) + ' £'
+//    }
+//    this.getRubCurrency = function(){
+//     return (this.amountMoney / currencyRub).toFixed(2) + ' ₽'
+//    }
+//    var getDollarCurrency1 = (this.amountMoney / currencyUSD).toFixed(2) + ' $'
+// }
+// var currency = new CurrencyConverter(10);
 // console.log(currency.getDollarCurrency())
+// console.log(currency.getEuroCurrency())
+// console.log(currency.getRubCurrency())
 // console.log(currency.getDollarCurrency1)
+
+

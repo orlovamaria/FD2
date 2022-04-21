@@ -16,21 +16,25 @@
 
 // calculator.divide(10, 5) ➞ 2
 
-
-function Calculator(){
-    this.add = function(par1, par2){
-        return par1 + par2;
-    };
-    this.subtract = function(par1, par2){
-        return par1 - par2;
-    }
-}
-
-var calculator = new Calculator();
-// console.log(calculator.add(10, 5));
-// console.log(calculator.subtract(10, 5));
- 
-
+// function Calculator(){
+//    this.add = function(num1, num2){
+//        return num1 + num2;
+//    }
+//    this.subtract = function(num1, num2){
+//     return num1 - num2;
+//    }
+//    this.multiply = function(num1, num2){
+//     return num1 * num2;
+//    }
+//    this.divide = function(num1, num2){
+//     return num1 / num2;
+//    }
+// }
+// var calculator = new Calculator();
+// console.log(calculator.add(10, 5))
+// console.log(calculator.subtract(10, 5))
+// console.log(calculator.multiply(10, 5))
+// console.log(calculator.divide(10, 5))
 
 
 
@@ -57,27 +61,32 @@ var calculator = new Calculator();
  p1.getAge() ➞ "David Jones ему 25"
  p1.getHeight() ➞ "David Jones его рост 175см"
  p1.getWeight() ➞ "David Jones весит 75кг" */
+
+
+
 //
 
-function Player(name, age, height, weight){
-    this.name = name;
-    this.age = age;
-    this.height = height;
-    this.weight = weight;
+// function Player(name, age, height, weight){
+//     this.name = name;
+//     this.age = age;
+//     this.height = height;
+//     this.weight = weight;
+//      this.getAge = function(){
+//            return this.name + ' ему ' + this.age+'(лет)';
+//      }
+//      this.getHeight = function(){
+//         return this.name + ' его рост ' + this.height + '(см)';
+//     }
+//     this.getWeight = function(){
+//         return this.name + ' весит ' + this.weight + 'кг';
+//     }
+// }
 
-    this.getAge = function(){
-        return this.name + ' ему ' + this.age;
-    }
-    this.getHeight = function(){
-        return this.name + ' его рост ' + this.height + 'см';
-    } 
-}
+// var p1 = new Player("David Jones", 25, 175, 75)
 
-var p1 = new Player('Max', 23, 175, 75);
-// console.log(p1.getAge());
-// console.log(p1.getHeight());
-
-
+// console.log(p1.getAge())
+// console.log(p1.getHeight())
+// console.log(p1.getWeight())
 
 
 
@@ -104,13 +113,20 @@ var emp3 = Employee("Antony", "Walker")
 emp3.name ➞ "Antony" */
 
 
-function Employee(name, lastname){
-    this.name = name;
-    this.lastname = lastname;
-    this.getFullName = function(){
-        return this.name + ' ' + this.lastname;
-    }
-}
+// function Employee(name, lastname){
+//     this.name = name;
+//     this.lastname = lastname;
 
-var emp1 = new Employee("John", "Smith");
-// console.log(emp1.getFullName());
+//     this.getFullName = function(){
+//         return this.name + ' ' + this.lastname;
+//     }
+//     this.getEmail = function(){
+//         return this.name + '.' + this.lastname + '@email.com';
+//     }
+// }
+// var emp1 = new Employee("John", "Smith")
+// var emp2 = new Employee("Mary",  "Sue")
+// var emp3 = new Employee("Antony", "Walker")
+// console.log(emp1.getFullName())
+// console.log(emp2.getEmail())
+// console.log(emp3.name)

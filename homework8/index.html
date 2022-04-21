@@ -5,10 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        div{
+            width: 200px;
+            height: 240px;
+            margin: 250px auto;
+        }
+        button{
+            width: 200px;
+            height: 40px;
+            background-color: aquamarine;
+            font-size: 14px;
+            font-family: 'Times New Roman', Times, serif;
+            margin-bottom: 20px;
+        }
+    </style>
 </head>
 <body>
+<div>
+    <button onclick="drinkStorage.addValue()">Ввод информации о напитке</button><br>
+   <button onclick="drinkStorage.getValue()">Получение информации о напитке</button><br>
+   <button onclick="drinkStorage.deleteValue()">Удаление информации о напитке</button><br>
+   <button onclick="drinkStorage.getKeys()">Перечень всех напитков</button><br>
 
-
+</div>
 
     <script src="script.js"></script>
 </body>
