@@ -1,20 +1,46 @@
 
+
+
 function HashStorageFunc(){
     var object = {};
 
     this.addValue = function(key, value){
-        key = prompt('Введите название напитка')
-        value = [];
-        do
+
+        object[key] = value;
+    }
+
+    this.getValue = function(key){
+        if(key in object){
+            return [key, object[key][0], object[key][1]]
+        }
+    }
+
+    this.deleteValue = function(key){
+        if(key in object){
+             return delete object[key];
+        }
+        
+    }
+
+    this.getKeys = function(){
+        return Object.keys(object) 
+    }
+}
+
+var drinkStorage = new HashStorageFunc();
+
+function enteringDrinkInf(){
+    var nameDrink = prompt('Введите название напитка');
+    do
           {
-            value[0] = prompt('Напиток алкогольный? Введите "да" или "нет"')
+            var alcoDrink = prompt('Напиток алкогольный? Введите "да" или "нет"')
           
-            if(value[0].toLowerCase() === 'да'){
-                value[0] = 'да';
+            if(alcoDrink.toLowerCase() === 'да'){
+                alcoDrink = 'да';
                 break;
             }
-            else if(value[0].toLowerCase() === 'нет'){
-                value[0] = 'нет';
+            else if(alcoDrink.toLowerCase() === 'нет'){
+                alcoDrink = 'нет';
                 break;
             }
             else{
@@ -22,41 +48,36 @@ function HashStorageFunc(){
             }
         }while(true);
 
-        value[1] = prompt('Введите рецепт напитка')
+        var recipeDrink = prompt('Введите рецепт напитка')
 
-        object[key] = value;
+        drinkStorage.addValue(nameDrink, [alcoDrink, recipeDrink])
+}
+
+function getInfAboutDrink(){
+    var nameDrink = prompt('Введите название напитка')
+    var result = drinkStorage.getValue(nameDrink)
+    if(result !== undefined){
+        alert('напиток ' + result[0] + '\n' + 'алкогольный: ' + result[1] + '\n'  + 'рецепт приготовления: '+ '\n' + result[2])
     }
+    else{
+        alert('Данный напиток отсутствует в списке')
+    } 
+}
 
-    this.getValue = function(key){
-        key = prompt('Введите название напитка')
-        if(key in object){
-            alert('напиток ' + key + '\n' + 'алкогольный: ' + object[key][0] + '\n'  + 'рецепт приготовления: '+ '\n' + object[key][1])
-        }
-        else{
-            alert('Данный напиток отсутствует в списке')
-        }
+function deleteDrink(result){
+    var nameDrink = prompt('Введите название напитка')
+    var result = drinkStorage.deleteValue(nameDrink)
+    if(result === true){
+        alert('напиток ' + nameDrink + ' удалён из списка')
     }
-
-    this.deleteValue = function(key){
-        key = prompt('Введите название напитка')
-        if(key in object){
-            alert('напиток ' + key + ' удалён из списка')
-            delete object[key];
-        }
-        else{
-            alert('Данный напиток не может быть удален так как отсутствует в списке')
-        }
-    }
-
-    this.getKeys = function(){
-        alert(Object.keys(object))
+    else{
+        alert('Данный напиток не может быть удален так как отсутствует в списке')
     }
 }
 
-var drinkStorage = new HashStorageFunc();
 
-
-
-
+function listOfAllDrinks(){
+      alert(drinkStorage.getKeys())
+}
 
 

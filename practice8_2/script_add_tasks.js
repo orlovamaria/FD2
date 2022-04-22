@@ -100,8 +100,25 @@ magic.trim("      javascript is awesome      ") ➞ "javascript is awesome"
 magic.listSlice([1, 2, 3, 4, 5], (2, 4)) ➞ [ 2, 3, 4 ]
 */
 
+function MagicStr(){
+    this.replace = function(){
 
+    }
+    this.strLength = function(){
 
+    }
+    this.trim = function(){
+
+    }
+    this.listSlice = function(){
+      
+    }
+}
+var magic = new MagicStr();
+console.log(magic.replace("AzErty-QwErty", "E", "e"))
+console.log(magic.strLength("hello world"))
+console.log(magic.trim("      javascript is awesome      "))
+console.log(magic.listSlice([1, 2, 3, 4, 5], (2, 4)))
 
 
 
