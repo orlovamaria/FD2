@@ -191,13 +191,20 @@ var scores = {"A": 100, "B": 14, "C": 9, "D": 28, "E": 145, "F": 12, "G": 3,
 Обратите внимание, что "1" не равно 1. */
 
 function spaceApart(arr){
-    var sum = 0;
-    for(var i = 0; i < arr.length; i++){
-        do{
-            arr.shift()
-        } while (arr[i] !== '1')
-    }
-    return arr;
+    
+    arr.map(function(elem, index, arr){
+        return arr.splice(0, arr.indexOf('1'))
+    })
+    var sum = arr.reduce(function(sum, elem){
+        if(elem < 0){
+            return sum = 'invalid'
+        }
+        else{
+            return sum += Number.isInteger(elem)
+        }
+    }, 0)
+    
+    return sum;
 }
 console.log(spaceApart([1, 0, 1, "1", 4, 3, 2, 3, 2, "1"]))
 console.log(spaceApart(["1", 9, 20, 38, "1"]))
