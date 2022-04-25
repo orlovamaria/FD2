@@ -191,22 +191,32 @@ var scores = {"A": 100, "B": 14, "C": 9, "D": 28, "E": 145, "F": 12, "G": 3,
 Обратите внимание, что "1" не равно 1. */
 
 function spaceApart(arr){
-    
-    arr.map(function(elem, index, arr){
-        return arr.splice(0, arr.indexOf('1'))
+    var result = 0;
+    arr.splice(0, arr.indexOf('1'))
+    while(arr[arr.length-1] !== '1'){
+       arr.pop()
+    }
+    var array = arr.filter(function(elem){
+        return elem === '1';
     })
-    var sum = arr.reduce(function(sum, elem){
-        if(elem < 0){
-            return sum = 'invalid'
-        }
-        else{
-            return sum += Number.isInteger(elem)
-        }
-    }, 0)
+    if(array.length > 2){
+        return result = 'invalid'
+    }
+    var res = arr.some(function(elem){
+        return elem < 0;
+    })
+    if(res === true){
+        return result = 'invalid'
+    }
     
-    return sum;
+    arr.forEach(function(elem){
+        if(Number.isInteger(elem)){
+            return result += elem;
+        }
+    })
+    return result;
 }
-console.log(spaceApart([1, 0, 1, "1", 4, 3, 2, 3, 2, "1"]))
-console.log(spaceApart(["1", 9, 20, 38, "1"]))
+console.log(spaceApart([1, 0, 1, "1", 4, 3, 2, 3, 2, "1", 0, 0]))
+console.log(spaceApart(["1", 9, 20, 38, "1", 1, 2]))
 console.log(spaceApart([3, 2, 9, "1", 0, 0, -1, "1"]))
 console.log(spaceApart([3, "1", 2, 9, "1", 0, 7, "1"]))
