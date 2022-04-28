@@ -42,9 +42,18 @@ function canConcatenate(arr1, arr2){
         return a - b
     })
 
-    var result = array.every(function(elem){
-        return arr2.includes(elem)
-    })
+    var result;
+
+    for( var i = 0; i < arr2.length; i++){
+        if(array[i] === arr2[i]){
+            result = true;
+        }
+        else{
+            result = false;
+            break;
+        }
+    }
+
     var result2 = array.length === arr2.length
 
     return result && result2;
