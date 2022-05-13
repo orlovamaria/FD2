@@ -96,7 +96,7 @@ btnSubmitLastame.onclick = submitLastame;
 // Task 8
 var firstLogin = document.querySelector('#first_login');
 var evError = document.querySelector('.error-message2')
-firstLogin.addEventListener('keyгз', function(event){
+firstLogin.addEventListener('keyup', function(event){
     if(event.code === 'Enter'){
         if(firstLogin.value[0] === firstLogin.value[0].toUpperCase()){
                 evError.style.display = 'block'
