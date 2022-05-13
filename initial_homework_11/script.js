@@ -34,6 +34,8 @@ function changeInfoCat3(){
      changeText.innerHTML = 'I am a beautiful cat №3'
 }
 
+
+
 function addNewCat(){
     var catList = document.getElementById('cat-info');
 

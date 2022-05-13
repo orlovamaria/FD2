@@ -1,0 +1,57 @@
+ul{
+    list-style-type: none;
+}
+
+span{
+    color: red;
+    cursor: pointer;
+   /*  border: 1px solid red; */
+}
+
+#list li:first-child{
+    margin-top: 30px;
+} 
+.about_myself{
+    width: 200px;
+    height: 40px;
+    border: solid white 2px;
+    background-color: #0b5ed7;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    border-radius: 5px;
+    color: white;
+}
+.counters{
+    width: 120px;
+    height: 50px;
+    background-color: blue;
+    border-radius: 30px;
+    margin-bottom: 10px;
+    font-size: 12px;
+    text-align: center;
+    padding-top: 5px;
+    font-size: 12px;
+    color: white;
+}
+.modal_window{
+    width: 55%; 
+    max-height: 70%; 
+    border-radius: 2px; 
+    background-color: lightskyblue; 
+    font-size: 50px; 
+    font-family: "Times New Roman", Times, serif; 
+    font-style: italic; 
+    display: none; 
+    position: fixed; 
+    left: 0; 
+    right: 0; 
+    padding: 0; 
+    margin: auto; 
+    will-change: top, opacity; 
+    top: 300px;
+    text-align: center;
+}
+.cross{
+    text-decoration: line-through;
+}
