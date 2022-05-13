@@ -23,16 +23,20 @@ var secondForm = document.forms.second_form;
 
 
 function createAForm(arr, form){
-    var divisionText = '';
-    var divisionValue = '';
+    var varDivision;
+    var varPayment;
+    arr.forEach(function(elem){
+        for(key in elem){
+            if(elem.name == 'division'){
+                varDivision = elem.variants;
+            }
+            if(elem.name == 'payment'){
+                varPayment = elem.variants
+            }
+        }
+    })
    arr.forEach(function(elem){
         for(var key in elem){
-            if(elem.name == 'division'){
-                elem.variants.forEach(function(el){
-                    divisionText = el.text;
-                    divisionValue = el.value;
-                })
-            }
             if(key == 'label'){
                 var tag = document.createElement(key)
                 tag.innerHTML = elem[key]
@@ -41,10 +45,6 @@ function createAForm(arr, form){
                 form.append(tag)
                 var enter = document.createElement('br')
                 tag.after(enter)
-            }
-            if(key.name == 'division'){
-                var select = document.createElement('select')
-                
             }
             else if(key == 'caption'){
                 var submit = document.createElement('button');
@@ -56,33 +56,23 @@ function createAForm(arr, form){
             }
         }
     })
-    var division = firsForm.elements.division;
-    var payment = document.forms.payment;
-    var votes = document.forms.votes;
-    
-    // arr.forEach(function(elem){
-    //     var division = document.forms.division;
-    //      for(var key in elem){
-    //          if(key.name == 'division'){
-    //              key.variants.forEach(function(element){
-    //                  for(var i in element){
-    //                      var select = document.createElement('select')
-    //                      var option = document.createElement('option')
-    //                      if(i == 'text'){
-    //                          option.innerHTML = element[i]
-
-    //                      }
-    //                      else if(i == 'value'){
-    //                         option.setAttribute(i, element[i])
-    //                      }
-    //                      select.append(option) 
-    //                  }
-    //              })
-    //          }
-    //      }
-    //      division.append(select)
-    // })
-
+    var tagDivision = document.querySelector('label[name="division"]');
+    var select = document.createElement('select')
+    tagDivision.after(select)
+    arr.forEach(function(elem){
+        for(key in elem){
+            if(elem.name === 'division'){
+                elem.variants.forEach(function(e){
+                    for(var i in e){
+                        var option = document.createElement('option')
+                        option.setAttribute("value", e.value)
+                        option.innerHTML = e.text;
+                        select.append(option)
+                    }
+                })
+            }
+        }
+    })
 }
 
 createAForm(formDef1, firsForm)
