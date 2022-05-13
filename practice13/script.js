@@ -1,78 +1,78 @@
 // Task 1
 
-var btnValidInput = document.getElementById('btn-submit-name')
+// var btnValidInput = document.getElementById('btn-submit-name')
  
  
- function validInput(){
-     var form = document.forms.form1;
-     var firstName = form.elements.firstName;
-     var errorMessage = document.querySelector('.error-message')
+//  function validInput(){
+//      var form = document.forms.form1;
+//      var firstName = form.elements.firstName;
+//      var errorMessage = document.querySelector('.error-message')
 
-     if(firstName.value === ''){
-        errorMessage.style.display = 'block';
-        firstName.focus();
-     }else{
-        errorMessage.style.display = 'none';
-     }
- }
+//      if(firstName.value === ''){
+//         errorMessage.style.display = 'block';
+//         firstName.focus();
+//      }else{
+//         errorMessage.style.display = 'none';
+//      }
+//  }
 
- btnValidInput.onclick = validInput
+//  btnValidInput.onclick = validInput
 
 
 //  Task 3
 
-var quad = document.querySelector('.blue_block')
- function changeBackground(){
-    quad.classList.toggle('changeColor')
+// var quad = document.querySelector('.blue_block')
+//  function changeBackground(){
+//     quad.classList.toggle('changeColor')
       
- }
+//  }
 
- quad.onclick = changeBackground
+//  quad.onclick = changeBackground
 //  quad.onmousemove = changeBackground
 //  quad.onmouseover = changeBackground
 // quad.addEventListener('contextmenu', changeBackground)
 
 // Task 4
 
-var like = document.querySelector('img[src$="like.png"]')
-var likeCounter = document.getElementById('like-counter')
-var counter = 0;
+// var like = document.querySelector('img[src$="like.png"]')
+// var likeCounter = document.getElementById('like-counter')
+// var counter = 0;
 
-function changeCounter(){
+// function changeCounter(){
 
-    likeCounter.innerHTML = counter++
-}
-like.addEventListener('dblclick', changeCounter)
+//     likeCounter.innerHTML = counter++
+// }
+// like.addEventListener('dblclick', changeCounter)
 
 
 // Task 5
 
-var inputName = document.getElementById('first_name2');
+// var inputName = document.getElementById('first_name2');
 
-inputName.addEventListener('keyup', function(event){
-    if(event.code === 'Enter'){
-        var currentValue = inputName.value;
-        var parentTable = document.getElementById('name_list')
-        parentTable.innerHTML += '<tr><td>' + currentValue + '</td></tr>'
-        inputName.value = ''
-    }
-})
+// inputName.addEventListener('keyup', function(event){
+//     if(event.code === 'Enter'){
+//         var currentValue = inputName.value;
+//         var parentTable = document.getElementById('name_list')
+//         parentTable.innerHTML += '<tr><td>' + currentValue + '</td></tr>'
+//         inputName.value = ''
+//     }
+// })
 
 
 // Task 6
 
-var btnOpen = document.getElementById('open-modal');
-var modal = document.getElementById('modal1')
+// var btnOpen = document.getElementById('open-modal');
+// var modal = document.getElementById('modal1')
 
-btnOpen.addEventListener('click', function(){
-    modal.classList.add('modal_open');
-})
+// btnOpen.addEventListener('click', function(){
+//     modal.classList.add('modal_open');
+// })
 
-window.addEventListener('keyup', function(event){
-    if(event.code === 'Escape'){
-        modal.classList.remove('modal_open');
-    }
-})
+// window.addEventListener('keyup', function(event){
+//     if(event.code === 'Escape'){
+//         modal.classList.remove('modal_open');
+//     }
+// })
 
 // Task 2
 var openWindow = document.querySelector('.error-message-lastname');
@@ -95,19 +95,15 @@ btnSubmitLastame.onclick = submitLastame;
 
 // Task 8
 var firstLogin = document.querySelector('#first_login');
-var error = document.querySelector('.error-message2')
-
-firstLogin.addEventListener('keyup', function(event){
+var evError = document.querySelector('.error-message2')
+firstLogin.addEventListener('keyгз', function(event){
     if(event.code === 'Enter'){
-        error.style.cssText = 'font-size: 40px'
+        if(firstLogin.value[0] === firstLogin.value[0].toUpperCase()){
+                evError.style.display = 'block'
+        }
     }
 })
 
-// firstLogin.addEventListener('keyup', function(event) {
-//     if(event.code === 'Enter'){
-//         error.style.cssText = 'font-size: 40px'
-//     }
-// })
 
 // Task 9
 

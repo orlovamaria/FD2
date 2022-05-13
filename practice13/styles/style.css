@@ -77,8 +77,12 @@ pre{
     top: 150px;
 }
 
-.error-message,.error-message2, .error-message3, .error-message4  {
+.error-message, .error-message3, .error-message4  {
     color: red;
+}
+.error-message2{
+    color: red;
+    display: none;
 }
 
 .error-hide{

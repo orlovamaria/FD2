@@ -97,15 +97,14 @@ function removeTask(){
     }
 }
 
+
 function taskCounter() {
     var crosChild = ulList.querySelectorAll('.cross');
-    updateDivCounter(ulList.children.length - crosChild.length, crosChild.length);
+    counterCrossNum.innerHTML = ulList.children.length - crosChild.length;
+    counterNotСrossedOutNum.innerHTML = crosChild.length
 }
 
-function updateDivCounter(notCrosCount, crosCount) {
-    counterCrossNum.innerHTML = crosCount;
-    counterNotСrossedOutNum.innerHTML = notCrosCount;
-}
+
 
 btnInfAboutMyself.addEventListener('click', function(){
     modalWindow.style.display = 'block';
