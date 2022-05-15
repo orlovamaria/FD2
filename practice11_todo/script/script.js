@@ -57,7 +57,7 @@ function createTask(){
 
     var date = new Date()
 
-    while(inputValue === ''){
+    while(inputValue.trim() === ''){
         inputValue.focus()
     }
 

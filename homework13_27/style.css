@@ -1,0 +1,33 @@
+
+.list-content-page-detail{
+    list-style: none;
+}
+.list-content-page-detail li{
+    display: flex;
+    align-items: center;
+    margin-bottom: 7px;
+}
+.list-content-page-detail li div {
+    min-width: 157px;
+    margin-right: 10px;
+}
+.input-list-detail{
+    /* border-color: #8d9ab1; */
+    width: 32em;
+    height: 2em;
+    margin: 8px 2px;
+}
+#description_of_the_site{
+    width: 600px;
+    height: 50px;
+    resize: none;
+}
+.allError{
+    display: none;
+    margin-left: 10px;
+    font-size: 20px;
+    color: red;
+}
+.allErrorBlock{
+    display: block;
+}

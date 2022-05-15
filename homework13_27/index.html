@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <p>Для внесения вашего сайта в каталог, заполните форму:</p>
+    <form action="https://fe.it-academy.by/TestForm.php" name="valid_form" id="valid_form" method="get">
+        <ul class="list-content-page-detail">
+            <li>
+                <div>
+                    <label for="developers">Разработчики:</label>
+                </div>
+                <input type="text" id="developers" name="developers" class="input-list-detail"> 
+                <p class="allError">Обязательное поле ввода</p>
+            </li>
+            <li>
+                <div>
+                    <label for="nameSite">Название сайта:</label>
+                </div>
+                <input type="text" id="nameSite" name="nameSite" class="input-list-detail">
+                <p class="allError">Обязательное поле ввода</p>
+            </li>
+            <li>
+                <div>
+                    <label for="urlSite">URL сайта:</label>
+                </div>
+                <input type="text" id="urlSite" name="urlSite" class="input-list-detail">
+                <p class="allError">Обязательное поле ввода</p>
+            </li>
+            <li>
+                <div>
+                    <label for="site_launch_date">Дата запуска сайта:</label>
+                </div>
+                <input type="date" id="site_launch_date" name="site_launch_date" class="input-list-detail">
+            </li>
+            <li>
+                <div>
+                    <label for="visitors">Посетителей в сутки:</label>
+                </div>
+                <input type="text" id="visitors" name="visitors" class="input-list-detail">
+                <p class="allError">Обязательное поле ввода</p>
+            </li>
+            <li>
+                <div>
+                    <label for="e-mail">E-mail для связи:</label>
+                </div>
+                <input type="text" id="e-mail" name="e-mail" class="input-list-detail">
+                <p class="allError">Обязательное поле ввода</p>
+            </li>
+            <li>
+                <div>
+                    <label for="catalog_category">Рубрика каталога:</label>
+                </div>
+                <select name="catalog_category" id="catalog_category" class="input-list-detail">
+                    <option value="appliances">Бытовая техника</option>
+                    <option value="computers">Компьютеры</option>
+                    <option value="TVs">Телевизоры</option>
+                </select>
+            </li>
+            <li>
+                <div>
+                    <label>Размещение:</label>
+                </div>
+                <input type="radio" id="free"><label for="free">бесплатное</label>
+                <input type="radio" id="paid"><label for="paid">платное</label>
+                <input type="radio" id="VIP"><label for="VIP">VIP</label>
+            </li>
+            <li>
+                <div>
+                    <label for="allow_reviews">Разрешить отзывы:</label>
+                </div>
+                <input type="checkbox" id="allow_reviews" name="allow_reviews">
+            </li>
+            <li>
+                <label for="description_of_the_site">Описание сайта:</label>
+            </li>
+            <li>
+                <textarea name="description_of_the_site" id="description_of_the_site" cols="30" rows="10"></textarea>
+            </li>
+            <li>
+                <input type="submit" value="Опубликовать">
+            </li>
+        </ul>
+    </form>
+    
+
+
+    <script src="script.js"></script>
+</body>
+</html>
