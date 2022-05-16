@@ -15,41 +15,42 @@
                 <div>
                     <label for="developers">Разработчики:</label>
                 </div>
-                <input type="text" id="developers" name="developers" class="input-list-detail"> 
+                <input type="text" id="developers" name="developers" class="input-list-detail text"> 
                 <p class="allError">Обязательное поле ввода</p>
             </li>
             <li>
                 <div>
                     <label for="nameSite">Название сайта:</label>
                 </div>
-                <input type="text" id="nameSite" name="nameSite" class="input-list-detail">
+                <input type="text" id="nameSite" name="nameSite" class="input-list-detail text">
                 <p class="allError">Обязательное поле ввода</p>
             </li>
             <li>
                 <div>
                     <label for="urlSite">URL сайта:</label>
                 </div>
-                <input type="text" id="urlSite" name="urlSite" class="input-list-detail">
+                <input type="text" id="urlSite" name="urlSite" class="input-list-detail text">
                 <p class="allError">Обязательное поле ввода</p>
             </li>
             <li>
                 <div>
                     <label for="site_launch_date">Дата запуска сайта:</label>
                 </div>
-                <input type="date" id="site_launch_date" name="site_launch_date" class="input-list-detail">
+                <input type="date" id="site_launch_date" name="site_launch_date" class="input-list-detail text">
+                <p class="allError">Обязательное поле ввода</p>
             </li>
             <li>
                 <div>
                     <label for="visitors">Посетителей в сутки:</label>
                 </div>
-                <input type="text" id="visitors" name="visitors" class="input-list-detail">
+                <input type="text" id="visitors" name="visitors" class="input-list-detail text">
                 <p class="allError">Обязательное поле ввода</p>
             </li>
             <li>
                 <div>
                     <label for="e-mail">E-mail для связи:</label>
                 </div>
-                <input type="text" id="e-mail" name="e-mail" class="input-list-detail">
+                <input type="email" id="e-mail" name="e-mail" class="input-list-detail text">
                 <p class="allError">Обязательное поле ввода</p>
             </li>
             <li>
@@ -57,33 +58,38 @@
                     <label for="catalog_category">Рубрика каталога:</label>
                 </div>
                 <select name="catalog_category" id="catalog_category" class="input-list-detail">
+                    <option value="undefined">Выберите категорию</option>
                     <option value="appliances">Бытовая техника</option>
                     <option value="computers">Компьютеры</option>
                     <option value="TVs">Телевизоры</option>
                 </select>
+                <p class="allError">Выберите категорию</p>
             </li>
             <li>
                 <div>
                     <label>Размещение:</label>
                 </div>
-                <input type="radio" id="free"><label for="free">бесплатное</label>
-                <input type="radio" id="paid"><label for="paid">платное</label>
-                <input type="radio" id="VIP"><label for="VIP">VIP</label>
+                <input type="radio" name="placement" id="free" value="free"><label for="free">бесплатное</label>
+                <input type="radio" name="placement" id="paid" value="paid"><label for="paid">платное</label>
+                <input type="radio" name="placement" id="VIP" value="VIP"><label for="VIP">VIP</label>
+                <p class="allError">Выберите категорию</p>
             </li>
             <li>
                 <div>
                     <label for="allow_reviews">Разрешить отзывы:</label>
                 </div>
                 <input type="checkbox" id="allow_reviews" name="allow_reviews">
+                <p class="allError">Обязательное поле ввода</p>
             </li>
             <li>
                 <label for="description_of_the_site">Описание сайта:</label>
             </li>
             <li>
                 <textarea name="description_of_the_site" id="description_of_the_site" cols="30" rows="10"></textarea>
+                <p class="allError">Обязательное поле ввода</p>
             </li>
             <li>
-                <input type="submit" value="Опубликовать">
+                <input type="button" value="Опубликовать" id="toPublish">
             </li>
         </ul>
     </form>
