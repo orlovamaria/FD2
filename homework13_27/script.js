@@ -73,6 +73,7 @@ urlSite.addEventListener('change', function(){
         return urlSite.value.includes(elem)
     })
     if(result === false){
+        urlSite.focus()
         alert('URL введен некорректно')
     }
 })
@@ -140,7 +141,7 @@ function getInftextarea(){
     }
 }
 
-submit.addEventListener('click', function(){
+submit.addEventListener('click', function(e){
         getInfselect()
         getInfInputRadio()
         getInfInputs()
@@ -172,6 +173,7 @@ submit.addEventListener('click', function(){
                 break
             }
         }
+        e.preventDefault()
 })
 
 
