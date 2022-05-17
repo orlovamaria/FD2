@@ -56,17 +56,18 @@ boxImages.addEventListener('click', function(event){
 
 var btnList = document.getElementById('sort')
 var nameList = document.querySelectorAll('.name')
-var arrNameList = [...nameList];
-var arrNameLisrText = arrNameList.map(function(elem){
-    return elem.innerHTML
-})
-var resultSortList = arrNameLisrText.sort()
-
 
 btnList.addEventListener('click', function(){
-
+    var arr = [];
+    nameList.forEach(function(elem){
+        arr.push([elem.innerHTML, elem.nextElementSibling.innerHTML])
+        arr.sort()
+    })
     for(var i = 0; i < nameList.length; i++){
-        nameList[i].innerHTML = resultSortList[i]
-    }
+            nameList[i].innerHTML = arr[i][0]
+            nameList[i].nextElementSibling.innerHTML = arr[i][1]
+        }
 })
+
+
 
