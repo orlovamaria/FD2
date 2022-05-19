@@ -144,18 +144,18 @@
                 <span>
                     Цена:
                 </span>
-                <span class="price">
+                <span class="price" id="price">
                     10
                 </span>
                 <br>
-                <a class="waves-effect waves-light btn">-1</a>
-                <input  class="total" type="text" style="width: 30px;" value="0">
-                <a class="waves-effect waves-light btn">+1</a>
+                <a class="waves-effect waves-light btn" id="decrease">-1</a>
+                <input  class="total" type="text" style="width: 30px;" value="0" id="result">
+                <a class="waves-effect waves-light btn" id="add">+1</a>
             </div>
 
             
           </div>
-          <a class="waves-effect waves-light btn">Посчитать сумму</a>
+          <a class="waves-effect waves-light btn" id="summ">Посчитать сумму</a>
           <div>Текущая сумма равна: <span id="current-total">0</span></div>
         </div>
       </div>
@@ -269,7 +269,7 @@
             
             
           </div>
-        <a class="waves-effect waves-light btn">Посчитать сумму всех товаров</a>
+        <a class="waves-effect waves-light btn" id="summa">Посчитать сумму всех товаров</a>
         <div>Текущая сумма равна: <span id="current-total-items">0</span></div>
       </div>
               
@@ -282,7 +282,8 @@
     </pre>
 
     <div>
-        <input type="text" name="input-info" data-length="3">
+        <input type="text" name="input-info" data-length="3" id="input-info">
+        <p></p>
     </div>
 
 

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <h1>Events</h1>
+
+
+
+
+    <!-- Делегирование -->
+
+    <h2>Делегирование</h2>
+
+    <ul id="cars">
+        <li class="active-car">
+            <img src="https://www.pngkey.com/png/detail/286-2866660_car-comments-car-svg-icon-free.png" width="88"
+                height="50">
+            <p>Car 1</p>
+        </li>
+        <li>
+            <img src="https://www.pngkey.com/png/detail/286-2866660_car-comments-car-svg-icon-free.png" width="88"
+                height="50">
+            <p>Car 2</p>
+        </li>
+        <li>
+            <img src="https://www.pngkey.com/png/detail/286-2866660_car-comments-car-svg-icon-free.png" width="88"
+                height="50">
+            <p>Car 3</p>
+        </li>
+        <li>
+            <img src="https://www.pngkey.com/png/detail/286-2866660_car-comments-car-svg-icon-free.png" width="88"
+                height="50">
+            <p>Car 4</p>
+        </li>
+        <li>
+            <img src="https://www.pngkey.com/png/detail/286-2866660_car-comments-car-svg-icon-free.png" width="88"
+                height="50">
+            <p>Car 5</p>
+        </li>
+        <li>
+            <img src="https://www.pngkey.com/png/detail/286-2866660_car-comments-car-svg-icon-free.png" width="88"
+                height="50">
+            <p>Car 6</p>
+        </li>
+        <li>
+            <img src="https://www.pngkey.com/png/detail/286-2866660_car-comments-car-svg-icon-free.png" width="88"
+                height="50">
+            <p>Car 7</p>
+        </li>
+        <li>
+            <img src="https://www.pngkey.com/png/detail/286-2866660_car-comments-car-svg-icon-free.png" width="88"
+                height="50">
+            <p>Car 8</p>
+        </li>
+        <li>
+            <img src="https://www.pngkey.com/png/detail/286-2866660_car-comments-car-svg-icon-free.png" width="88"
+                height="50">
+            <p>Car 9</p>
+        </li>
+    </ul>
+
+
+
+    Счётчик: <input type="button" value="1" data-counter1 >
+    Ещё счётчик2: <input type="button" value="2" data-counter1 >
+    
+    Счётчик3: <input type="button" value="23" data-counter1 >
+    Ещё счётчик4: <input type="button" value="-10" data-counter1 >
+    
+    Счётчик5: <input type="button" value="12" data-counter1 >
+    Ещё счётчик6: <input type="button" value="333" data-counter1 >
+ 
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+    
+     <button data-toggle-id="subscribe-mail">
+        Раскрыть форму отправки
+    </button>
+
+    <form id="subscribe-mail" hidden>
+        Ваша почта: <input type="email">
+    </form>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <button data-toggle-id="burger">
+        Раскрыть див отправки
+    </button>
+
+    <div id="burger" hidden>
+        Ваша почта: <input type="email">
+    </div>
+
+
+    <button data-toggle-id="burger1">
+        Раскрыть див отправки
+    </button>
+
+    <div id="burger1" hidden>
+        Ваша почта: <input type="email">
+    </div>
+
+
+
+
+
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+
+    <h2>Всплытие и погружение событий</h2>
+
+    <div class="container1">
+        <div class="container2">
+            <div class="container3">
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="./script.js"></script>
+    <script src="./cars.js"></script>
+    <script src="./counter.js"></script>
+    <script src="./toggle.js"></script>
+</body>
+
+</html>
