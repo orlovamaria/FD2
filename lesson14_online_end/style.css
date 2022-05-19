@@ -157,9 +157,12 @@
     font-size: 1rem;
     font-weight: 300;
     display: block;
-    margin: 1rem auto 4rem auto;
+    margin: 1rem 0 4rem 0;
     cursor: pointer;
     transition: transform 200ms ease, box-shadow 200ms ease;
+  }
+  .submitDisplay{
+    display: none;
   }
   
   .submit:focus {
@@ -237,3 +240,21 @@
   .show-quiz{
     display: block;
   }
+  .none-quiz{
+    display: none;
+  }
+  .containerButtons{
+    display: flex;
+    justify-content: space-between;
+  }
+  .btnShow-quiz{
+    display: block;
+  }
+  .btnNone-quiz{
+    display: none;
+  }
+  .textend{
+    justify-content: flex-end;
+  }
+  
+  
