@@ -123,4 +123,35 @@ setCrosOutElements();
 taskCounter();
 btnAddTask.onclick = createTask;
 
+const saveTasks = document.querySelector('#save-tasks')
+const clearTasks = document.querySelector('#clear-tasks')
+
+const saveTasksLocalstorage = () => {
+    let listCounter = ulList.innerHTML;
+    localStorage.setItem('list-items', listCounter)
+    localStorage.setItem('counterCrossNum', counterCrossNum.innerHTML)
+    localStorage.setItem('counterNotСrossedOutNum', counterNotСrossedOutNum.innerHTML)
+}
+
+saveTasks.addEventListener('click', saveTasksLocalstorage)
+
+const renderContent = () => {
+    ulList.innerHTML = localStorage.getItem('list-items')
+    counterCrossNum.innerHTML = localStorage.getItem('counterCrossNum')
+    counterNotСrossedOutNum.innerHTML = localStorage.getItem('counterNotСrossedOutNum')
+    removeTask()
+    setCrosOutElements()
+}
+
+renderContent()
+
+const clearLocalTasks = () => {
+    localStorage.removeItem('list-items')
+    localStorage.removeItem('counterCrossNum')
+    localStorage.removeItem('counterNotСrossedOutNum')
+    ulList.innerHTML = ''
+    counterCrossNum.innerHTML = '0'
+    counterNotСrossedOutNum.innerHTML = listElements.length;
+}
+clearTasks.addEventListener('click', clearLocalTasks)
 

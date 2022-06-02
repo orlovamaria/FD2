@@ -51,7 +51,7 @@ function mirror(arr){
            arr.push(arr[i])
        }
    }
-return arr;
+   return arr;
 }
 
 console.log(mirror([0, 2, 4, 6]))
