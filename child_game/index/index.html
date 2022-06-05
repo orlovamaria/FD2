@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Приветствие -->
+
+    <div class="container">
+            <div class="circle_wraper">
+                <div class="circle red">W</div>
+                <div class="circle yellow">E</div>
+                <div class="circle blue">L</div>
+                <div class="circle violet">C</div>
+                <div class="circle green">O</div>
+                <div class="circle pink">M</div>
+            </div>
+    </div>
+
+    <!-- Ввод данных пользователя -->
+
+    <div class="container">
+        <div class="userDataForm">
+            <label for="userNameForm">Enter your name</label>
+            <input type="text" id="userNameForm">
+        </div>
+    </div>
+
+    <!-- Cтартовая страница -->
+
+    <div class="container">
+        <div class="start-window">
+            <div class="header-window">
+                <div class="inf-buttons">
+                    <a href="#" class="inf-buttons-style inf-blocks-style">Exit</a>
+                    <a href="#popup_options" class="inf-buttons-style inf-blocks-style">Information</a>
+                </div>
+                <div class="user-name-result">
+                    <div class="userName inf-blocks-style">Username</div>
+                    <div class="userCounter inf-blocks-style">z z z</div>
+                </div>
+            </div>
+    
+            <div class="levels-start-window">
+                 <div class="first-level-start levels-start-blocks">
+                     <a href="#" class="first-level-button levels-start-buttons">
+                        <div class="start-text"><strong>LEVEL 1</strong> </div>
+                        <div class="start-text">Assemble the figure</div>
+                    </a>
+                 </div>
+                 <div class="second-level-start levels-start-blocks">
+                    <a href="#" class="second-level-button levels-start-buttons">
+                      <div class="start-text"><strong>LEVEL 2</strong> </div>
+                       <div class="start-text">Mathematics</div>
+                    </a>
+                </div>
+                <div class="third-level-start levels-start-blocks">
+                    <a href="#" class="third-level-button levels-start-buttons">
+                      <div class="start-text"><strong>LEVEL 3</strong> </div>
+                       <div class="start-text">Learn letters</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальное окно информации -->
+
+    <div id="popup_options" class="popup_options">
+        <div class="popup_options_body">
+            <div class="popup_options_content">
+                <a href="#" class="popup_options_close">X</a>
+                <div class="popup_options_title">INFORMATION</div>
+                <div class="popup_options_text">Hello! In this game you can learn letters, numbers and shapes. You need to go through three levels and then you can get a cartoon as a gift!</div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Первый уровень -->
+
+    <div class="container">
+        <div class="header-window">
+            <div class="inf-buttons">
+                <a href="#" class="inf-buttons-style inf-blocks-style">Exit</a>
+                <a href="#popup_options" class="inf-buttons-style inf-blocks-style">Information</a>
+            </div>
+            <div class="user-name-result">
+                <div class="userName inf-blocks-style">Username</div>
+                <div class="userCounter inf-blocks-style">z z z</div>
+            </div>
+        </div>
+
+        <div class="first-level-body">
+              <div class="first-level-body-details-left">
+                   <div class="green-triangle-parent">
+                       <div class="green-triangle">
+                           <span>Green triangle</span>
+                       </div>
+                    </div>
+                   <div class="brown-square-parent">
+                       <div class="brown-square">Brown square</div>
+                   </div>
+              </div>
+              <div class="first-level-body-image">
+                    <div class="white-triangle first-white-triangle"></div>
+                    <div class="white-triangle second-white-triangle"></div>
+                    <div class="white-square"></div>
+              </div>
+              <div class="first-level-body-details-right">
+                <div class="green-triangle-parent">
+                    <div class="green-triangle">
+                        <span>Green triangle</span>
+                    </div>
+                </div>
+        </div>
+    </div>
+
+<!-- Модальное окно при правильно выполненном задании -->
+
+<div id="popup_done_correctly" class="popup_done">
+    <div class="popup_done_text">Correctly! Well done! You assembled a Christmas tree from two green triangles and a brown square.</div>
+</div>
+
+<!-- Модальное окно при не верно выполненном задании -->
+
+<div id="popup_done_incorrectly" class="popup_done">
+    <div class="popup_done_text">Try again and you'll learn!</div>
+</div>
+
+    <script src="../script/script.js"></script>
+</body>
+</html>
