@@ -27,6 +27,7 @@
         <div class="userDataForm">
             <label for="userNameForm">Enter your name</label>
             <input type="text" id="userNameForm">
+            <button id="userDataFormButton">Next</button>
         </div>
     </div>
 
@@ -40,8 +41,12 @@
                     <a href="#popup_options" class="inf-buttons-style inf-blocks-style">Information</a>
                 </div>
                 <div class="user-name-result">
-                    <div class="userName inf-blocks-style">Username</div>
-                    <div class="userCounter inf-blocks-style">z z z</div>
+                    <div class="userName inf-blocks-style"></div>
+                    <div class="userCounter inf-blocks-style">
+                        <i class="fa-solid fa-cake-candles cake" id="cake-one"></i>
+                        <i class="fa-solid fa-cake-candles cake" id="cake-two"></i>
+                        <i class="fa-solid fa-cake-candles cake" id="cake-three"></i>
+                    </div>
                 </div>
             </div>
     
@@ -84,40 +89,31 @@
     <!-- Первый уровень -->
 
     <div class="container">
-        <div class="header-window">
-            <div class="inf-buttons">
-                <a href="#" class="inf-buttons-style inf-blocks-style">Exit</a>
-                <a href="#popup_options" class="inf-buttons-style inf-blocks-style">Information</a>
-            </div>
-            <div class="user-name-result">
-                <div class="userName inf-blocks-style">Username</div>
-                <div class="userCounter inf-blocks-style">z z z</div>
-            </div>
-        </div>
-
+        <div class="first-level-body-infBlock">Collect the street from the available figures</div>
         <div class="first-level-body">
               <div class="first-level-body-details-left">
                    <div class="green-triangle-parent">
-                       <div class="green-triangle">
+                       <div class="green-triangle elem-drag firstGreenTriangle" draggable="true">
                            <span>Green triangle</span>
                        </div>
                     </div>
                    <div class="brown-square-parent">
-                       <div class="brown-square">Brown square</div>
+                       <div class="brown-square elem-drag" draggable="true">Brown square</div>
                    </div>
               </div>
               <div class="first-level-body-image">
-                    <div class="white-triangle first-white-triangle"></div>
-                    <div class="white-triangle second-white-triangle"></div>
-                    <div class="white-square"></div>
+                    <div class="white-triangle first-white-triangle js-elem"></div>
+                    <div class="white-triangle second-white-triangle js-elem"></div>
+                    <div class="white-square js-elem"></div>
               </div>
               <div class="first-level-body-details-right">
                 <div class="green-triangle-parent">
-                    <div class="green-triangle">
+                    <div class="green-triangle elem-drag secondGreenTriangle" draggable="true">
                         <span>Green triangle</span>
                     </div>
                 </div>
         </div>
+        <button class="first-level-body-done-button">Done</button>
     </div>
 
 <!-- Модальное окно при правильно выполненном задании -->
@@ -132,6 +128,10 @@
     <div class="popup_done_text">Try again and you'll learn!</div>
 </div>
 
+
+
+
+    <script src="https://kit.fontawesome.com/ef9f0ca4f4.js" crossorigin="anonymous"></script>
     <script src="../script/script.js"></script>
 </body>
 </html>

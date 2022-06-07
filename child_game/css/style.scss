@@ -26,6 +26,8 @@ body{
     -webkit-background-size: 100%;
     background-size: 100%;
     font-family: $font;
+    overflow: hidden;
+
 }
 
 .container{
@@ -35,33 +37,6 @@ body{
 a{
     text-decoration: none;
     color: inherit;
-}
-.inf-blocks-style{
-    border-radius: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: rgba(255, 255, 255, 0.9);
-    border: solid 1px white;
-    font-size: 25px;
-}
-.levels-start-blocks{
-    width: 500px;
-    height: 450px;
-    border-radius: 100px;
-    background-color: rgba(255, 255, 255, 0.9);
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-    font-size: 25px;
-    color: red;
-}
-.start-text{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 .header-window{
     width: 100%;
@@ -91,29 +66,12 @@ a{
         .userCounter{
             width: 250px;
             height: 60px;
-        }
-    }
-}
-.green-triangle-parent{
-    width: 350px;
-    height: 350px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    .green-triangle{
-        width: 0;
-	    height: 0;
-	    border-left: 170px solid transparent;
-	    border-right: 170px solid transparent;
-	    border-bottom: 200px solid green;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        span{
-            margin-left: -24px;
-            margin-top: 100px;
-            color: white;
-            font-size: 18px;
+            display: flex;
+            justify-content: space-around;
+            .cake{
+                font-size: 50px;
+                color: lightgray;
+            }
         }
     }
 }
@@ -136,7 +94,7 @@ a{
         font-size: 25px;
     } 
 }
-.popup_done_displayBlock{
+.displayBlock{
     opacity: 1;
     transition: 1s;
 }
@@ -147,10 +105,10 @@ a{
 .circle_wraper{
     width: 1000px;
     height: 40px;
-    display: none;
-    // display: flex;
-    // flex-direction: row;
-    // justify-content: space-between;
+    // display: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     position: absolute;
     margin: auto;
     top: 0;
@@ -205,13 +163,14 @@ a{
    width: 100%;
    height: 100%;
    background: transparent;
-   display: none;
-//    display: flex;
-//    flex-direction: column;
-//    justify-content: center;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
    align-items: center;
    margin-top: 300px;
-    input{
+   opacity: 0;
+   transition: 1s;
+    #userNameForm{
         width: 600px;
         height: 60px;
         margin: auto auto;
@@ -225,12 +184,56 @@ a{
         font-size: 40px;
         color: red;
     }
+    #userDataFormButton{
+        width: 200px;
+        height: 40px;
+        margin-top: 15px;
+        background-color: red;
+        color: white;
+        border-radius: 15px;
+        border: none;
+        font-size: 20px;
+    }
+}
+.displayBlock{
+    opacity: 1;
+    transition: 1s;
 }
 
-// Стартовая страница
 
+// Стартовая страница
+.inf-blocks-style{
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: solid 1px white;
+    font-size: 25px;
+    opacity: 0;
+    transition: 1s;
+}
+.levels-start-blocks{
+    width: 500px;
+    height: 450px;
+    border-radius: 100px;
+    background-color: rgba(255, 255, 255, 0.9);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 25px;
+    color: red;
+}
+.start-text{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .start-window{
-    display: none;
+    opacity: 0;
+    transition: 1s;
     .levels-start-window{
         width: 100%;
         // height: 400px;
@@ -256,6 +259,10 @@ a{
             }
         }
     }
+}
+.displayBlock{
+    opacity: 1;
+    transition: 1s;
 }
 
 // Модальное окно информации
@@ -317,12 +324,48 @@ a{
 }
 
 // Первый уровень
-
-.first-level-body{
+.green-triangle-parent{
+    width: 350px;
+    height: 350px;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    .green-triangle{
+        width: 0;
+	    height: 0;
+	    border-left: 170px solid transparent;
+	    border-right: 170px solid transparent;
+	    border-bottom: 200px solid green;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        span{
+            margin-left: -24px;
+            margin-top: 100px;
+            color: white;
+            font-size: 18px;
+        }
+    }
+}
+.first-level-body-infBlock{
+    width: 300px;
+    height: 50px;
+    border: none;
+    border-radius: 15px;
+    font-size: 25px;
+    color: red;
+    background: transparent;
+    margin: 0 auto;
+    text-align: center;
+    display: none;
+}
+.first-level-body{
+    display: none;
     justify-content: space-around;
     width: 100%;
     margin-top: 30px;
+    opacity: 0;
+    transition: 1s;
     .first-level-body-details-left{
         display: flex;
         flex-direction: column;
@@ -358,12 +401,43 @@ a{
         }
         .first-white-triangle{
             position: absolute;
-            top: 140px;
+            top: 79px;
+        }
+        .green-triangle{
+            width: 0;
+            height: 0;
+            border-left: 170px solid transparent;
+            border-right: 170px solid transparent;
+            border-bottom: 200px solid green;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            span{
+                margin-left: -24px;
+                margin-top: 100px;
+                color: white;
+                font-size: 18px;
+            }
         }
         .second-white-triangle{
             position: absolute;
             top: 280px;
-            z-index: 1;
+        }
+        .green-triangle{
+            width: 0;
+            height: 0;
+            border-left: 170px solid transparent;
+            border-right: 170px solid transparent;
+            border-bottom: 200px solid green;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            span{
+                margin-left: -24px;
+                margin-top: 100px;
+                color: white;
+                font-size: 18px;
+            }
         }
         .white-square{
             width: 120px;
@@ -374,6 +448,16 @@ a{
             top: 480px;
             right: 66px;
         }
+        .brown-square{
+            width: 120px;
+            height: 120px;
+            background-color: brown;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 18px;
+        }
     }
     .first-level-body-details-right{
         display: flex;
@@ -381,6 +465,23 @@ a{
         justify-content: center;
     }
 }
+.first-level-body-done-button{
+    width: 100px;
+    height: 100px;
+    border-radius: 30px;
+    font-size: 20px;
+    color: white;
+    background-color: red;
+    border: 3px solid white;
+    position: absolute;
+    bottom: 100px;
+    right: 200px;
+}
+.displayBlock{
+    opacity: 1;
+    transition: 1s;
+}
+
 
 
 
