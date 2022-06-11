@@ -1,0 +1,31 @@
+.ulList{
+    list-style: none;
+}
+.ulList li{
+    display: flex;
+    align-items: center;
+    margin-bottom: 7px;
+}
+.ulList li div {
+    min-width: 150px;
+    margin-right: 10px;
+}
+
+#aboutSite{
+    width: 410px;
+    height: 80px;
+    resize: none;
+}
+.validError{
+    display: none;
+    margin-left: 10px;
+    font-size: 12px;
+    color: red;
+}
+body form ul li .validErrorOn{
+    display: block;
+}
+
+.inputLi{
+    width: 250px;
+}

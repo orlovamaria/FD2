@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <form action="https://fe.it-academy.by/TestForm.php" name="valid_form" id="valid_form" method="get">
+        <ul class="ulList">
+            <li>
+                <div>
+                    <label for="userName">Разработчики:</label>
+                </div>
+                <input type="text" id="developers" name="userName" class="inputLi"> 
+                <p class="validError">Обязательное для заполнения поле</p>
+            </li>
+            <li>
+                <div>
+                    <label for="userSite">Название сайта:</label>
+                </div>
+                <input type="text" id="nameSite" name="userSite" class="inputLi">
+                <p class="validError">Обязательное для заполнения поле</p>
+            </li>
+            <li>
+                <div>
+                    <label for="userUrl">URL сайта:</label>
+                </div>
+                <input type="text" id="urlSite" name="userUrl" class="inputLi">
+                <p class="validError">Обязательное для заполнения поле</p>
+            </li>
+            <li>
+                <div>
+                    <label for="inputDate">Дата запуска сайта:</label>
+                </div>
+                <input type="date" id="inputDate" name="userDate" class="inputLi">
+                <p class="validError">Обязательное для заполнения поле</p>
+            </li>
+            <li>
+                <div>
+                    <label for="visitors">Посетителей в сутки:</label>
+                </div>
+                <input type="text" id="visitors" name="visitors" class="inputLi">
+                <p class="validError">Обязательное для заполнения поле</p>
+            </li>
+            <li>
+                <div>
+                    <label for="e-mail">E-mail для связи:</label>
+                </div>
+                <input type="email" id="e-mail" name="e-mail" class="inputLi">
+                <p class="validError">Обязательное для заполнения поле</p>
+            </li>
+            <li>
+                <div>
+                    <label for="catSelect">Рубрика каталога:</label>
+                </div>
+                <select name="catSelect" id="catSelect" class="inputLi">
+                    <option value="undefined">Выберите категорию</option>
+                    <option value="appliances">Бытовая техника</option>
+                    <option value="phones">Смартфоны</option>
+                    <option value="food">Продукты</option>
+                </select>
+                <p class="validError">Выберите категорию</p>
+            </li>
+            <li>
+                <div>
+                    <label>Размещение:</label>
+                </div>
+                <input type="radio" name="payment" id="free" value="free"><label for="free">бесплатное</label>
+                <input type="radio" name="payment" id="paid" value="paid"><label for="paid">платное</label>
+                <input type="radio" name="payment" id="VIP" value="VIP"><label for="VIP">VIP</label>
+                <p id="radio-error" class="validError">Выберите подписку</p>
+            </li>
+            <li>
+                <div>
+                    <label for="reviews">Разрешить отзывы:</label>
+                </div>
+                <input type="checkbox" id="reviews" name="reviews">
+                <p class="validError">Разрешите отзывы</p>
+            </li>
+            <li>
+                <label for="aboutSite">Описание сайта:</label>
+            </li>
+            <li>
+                <textarea name="aboutSite" id="aboutSite" cols="30" rows="10"></textarea>
+                <p class="validError">Обязательное для заполнения поле</p>
+            </li>
+            <li>
+                <input type="submit" value="Опубликовать" id="publish">
+            </li>
+        </ul>
+    </form>
+</body>
+<script src="script.js"></script>
+</html>

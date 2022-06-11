@@ -11,7 +11,7 @@ const getAllPosts = (count = 3) => {
 
     .then(
         (data) => {
-        // console.log(data[9].title)
+        // console.log(data)
             const containerNews = document.querySelector('#posts')
             containerNews.innerHTML = '';
             data.forEach((post) => {

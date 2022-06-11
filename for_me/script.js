@@ -10,12 +10,12 @@ ctx.fillRect(100, 50, 150, 75)
 // ctx.clearRect(0,0,400,200)
 
 // прямоугольник прямого вида
-ctx.strokeStyle = 'green'
-ctx.lineWidth = '10'
-ctx.rect(50,10,100,100);
-ctx.stroke()
-ctx.fillStyle = 'orange'
-ctx.fill()
+// ctx.strokeStyle = 'green'
+// ctx.lineWidth = '10'
+// ctx.rect(50,10,100,100);
+// ctx.stroke()
+// ctx.fillStyle = 'orange'
+// ctx.fill()
 
 
 // Рисуем линии
@@ -91,12 +91,20 @@ ctx.fill()
 canvas.onmousemove = function(event){
     var x = event.offsetX;
     var y = event.offsetY;
-    ctx.clearRect(0,0,400, 200)
+    ctx.clearRect(0,0,600, 600)
+
     ctx.beginPath()
-    var radius = Math.pow(Math.pow(x-200, 2) + Math.pow(y - 100, 2),0.5)
-    ctx.arc(200, 100, radius, 0, 2*pi, false);
-    ctx.stroke();
-    ctx.fill()
+    ctx.strokeStyle = 'red'
+    ctx.lineWidth = '5'
+    ctx.moveTo(100, 50)
+    ctx.lineTo(x, y)
+    ctx.stroke()
+
+    // ctx.beginPath()
+    // var radius = Math.pow(Math.pow(x-200, 2) + Math.pow(y - 100, 2),0.5)
+    // ctx.arc(200, 100, radius, 0, 2*pi, false);
+    // ctx.stroke();
+    // ctx.fill()
 }
 
 // Кривые
