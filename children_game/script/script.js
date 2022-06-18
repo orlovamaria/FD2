@@ -98,6 +98,6 @@ initConfetti = () => {
     resizeCanvas();
   });
   
-  window.addEventListener('click', function () {
-    initConfetti();
-  });
+  // window.addEventListener('click', function () {
+  //   initConfetti();
+  // });
