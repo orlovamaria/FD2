@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webpack 5. Начало работы.</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Webpack 5. Начало работы.</h1>
+
+        <div>
+            <hr class="step">
+            <strong>npm init –y (или npm init вводим, и нажимаем постоянно enter)</strong>
+            <hr class="substep">
+            <strong>npm i -D webpack webpack-cli</strong>
+            <p>Создаем директорию «src» для хранения файлов приложения.  Начнем с создания простого файла «index.js»:</p>
+            <h4>Базовая настройка</h4>
+            <p>Создаем файл «webpack.config.js» в корневой директории проекта.</p>
+            <h4>Точка входа</h4>
+            <strong class="comment">// webpack.config.js</strong>
+            <div class="code">
+            <strong>
+const path = require('path');
+ 
+module.exports = {
+    entry: {
+      main: path.resolve(__dirname, './src/index.js'),
+    },
+}
+            </strong>
+            </div>
+            <h4>Точка выхода</h4>
+            <div class="code">
+                <strong>
+<span class="done">module.exports = {</span>
+    ///
+    output: {
+        path: path.resolve(__dirname, './dist'),
+        filename: '[name].bundle.js',
+    },
+<span class="done">}</span>
+                </strong>
+
+            </div>
+            <p>Добавляем скрипт «build» в файл «package.json»</p>
+            <strong class="comment">// package.json</strong>
+            <div class="code">
+            <strong>
+"scripts": {
+    "build": "webpack"
+}
+</strong>
+</div>
+        </div>
+        <p>Запускаем вебпак:</p>
+        <strong>npm run build</strong>
+        <p>В директории «dist» создается файл main.bundle.js». Файл не изменился, но мы успешно осуществили сборку проекта.</p>
+        <h4>Плагины</h4>
+        <p>html-webpack-plugin — создает HTML-файл на основе шаблона</p>
+        <strong>npm i -D html-webpack-plugin</strong>
+        <p>Создаем файл «template.html» в директории «src».</p>
+        <p>Добавляем в настройки вебпака свойство «plugins», где определяем плагин, название выходного файла (index.html) и шаблон:</p>
+        <strong class="comment">// webpack.config.js</strong>
+        <div class="code">
+            <strong>
+<span class="done">const path = require('path')</span>
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+
+module.exports = {
+    plugins: [
+    new HtmlWebpackPlugin({
+    title: 'webpack Boilerplate',
+    template: path.resolve(__dirname, './src/template.html'), // шаблон
+    filename: 'index.html', // название выходного файла
+    })
+    ],
+}
+        </strong>
+  
+        </div>
+        <p>Запускаем сборку. Директория «dist» теперь содержит файл «index.html» с подключенным в нем скриптом.</p>
+        <strong class="comment">// index.js</strong>
+        <div class="code">
+            <strong>
+// создаем элемент заголовка
+const heading = document.createElement('h1');
+heading.textContent = 'Как интересно!'
+// добавляем заголовок в DOM
+const root = document.querySelector('#root');
+root.append(heading)
+
+            </strong>
+        </div>
+
+        <h4>Очистка</h4>
+        <p>Установим clean-webpack-plugin, очищающий директорию «dist» при каждой сборке проекта.</p>
+        <p>clean-webpack-plugin — удаляет/очищает директорию сборки проекта</p>
+        <strong>npm i -D clean-webpack-plugin</strong>
+        <div><strong class="comment">// webpack.config.js</strong></div>
+        <div class="code">
+            <strong>        
+const HtmlWebpackPlugin = require('html=webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+
+plugins: [
+    new CleanWebpackPlugin(),
+],
+</strong>
+</div>
+
+
+<h4>Babel (JavaScript)</h4>
+<p>Babel — это инструмент, позволящий использовать будущий JavaScript сегодня.</p>
+
+
+    <ul>
+        <li>
+           •  babel-loader — транспиляция файлов с помощью Babel и вебпака
+        </li>
+        <li> • @babel/core — транспиляция ES2015+ в обратно совместимый JavaScript</li>
+        <li> • @babel/preset-env — полезные стандартные настройки Babel</li>
+        <li> • @babel/plugin-proposal-class-properties — пример кастомной
+            конфигурации Babel (установка свойств экземпляров в теле класса, а не в его конструкторе)</li>
+    </ul>
+    
+
+    <strong>npm i -D babel-loader</strong><br>
+    <strong>npm i -D @babel/core</strong><br>
+    <strong>npm i -D @babel/preset-env</strong><br>
+    <strong>npm i -D @babel/plugin-proposal-class-properties</strong><br>
+
+    <div><strong class="comment">// webpack.config.js</strong></div>
+    <div class="code">
+        <strong> 
+
+module: {
+   rules: [
+      // JavaScript
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: ['babel-loader'],
+      },
+    ]
+}
+
+</strong>
+</div>
+
+
+<p>создаем файл ".babelrc" в корне проекта:</p>
+
+<div class="code">
+    <strong> 
+
+{
+    "presets": ["@babel/preset-env"],
+    "plugins": ["@babel/plugin-proposal-class-properties"]
+}
+
+</strong>
+</div>
+
+<p>Запускаем сборку с помощью npm run build. Теперь все работает.</p>
+
+<h4>Изображения</h4>
+
+<strong class="comment">// index.js</strong>
+<div class="code">
+    <strong> 
+import example from './images/smile.jpg'
+</strong>
+</div>
+
+<p>При запуске сборки будет выброшено исключение.</p>
+<p>Для изображений следует использовать тип «asset/resource». Обратите внимание, что речь идет именно о типе (type), а не о загрузчике (loader):</p>
+
+<strong class="comment">// webpack.config.js</strong>
+
+
+<div class="code">
+    <strong> 
+<span class="done">module.exports = {
+ // ...
+    module: {
+    rules: [
+    // изображения</span>
+                {
+                    test: /\.(?:ico|gif|png|jpg|jpeg)$/i,
+                    type: 'asset/resource',
+                },
+<span class="done"> 
+    ],
+}</span>
+</strong>
+</div>
+
+<p>В директории «dist» появляется новый файл.</p>
+
+<h4>Шрифты и другие встраиваемые данные</h4>
+
+<p>Вебпак также имеет встроенный модуль для обработки некоторых встраеваемых данных, таких как шрифты и SVG. Для этого достаточно указать тип «asset/inline»:</p>
+
+
+<div class="code">
+    <strong> 
+<span class="done">module.exports = {
+ // ...
+    module: {
+    rules: [
+    // шрифты и SVG</span>
+                {
+                    test: /\.(woff(2)?|eot|ttf|otf|svg|)$/,
+                    type: 'asset/inline',
+                },
+<span class="done"> 
+    ],
+}</span>
+</strong>
+</div>
+
+
+<h4>Стили</h4>
+
+<ul>
+    <li>•sass-loader — загружает SCSS и компилирует его в CSS </li>
+    <li>•node-sass — Node Sass</li>
+    <li>•css-loader — загрузка стилей</li>
+    <li>•style-loader — применение стилей к элементам DOM</li>
+</ul>
+
+<strong>npm i -D sass-loader <span class="warning">(если вы используете windows7, не устанавливайте данный плагин, работу с препроцессорами придется иначе настраивать)</span></strong><br>
+<strong>npm i -D css-loader</strong><br>
+<strong>npm i -D style-loader</strong><br>
+<strong>npm i -D node-sass <span class="warning">(если вы используете windows7, не устанавливайте данный плагин, работу с препроцессорами придется иначе настраивать)</span></strong><br>
+
+<strong class="comment">// webpack.config.js</strong>
+   
+
+<div class="code">
+    <strong> 
+<span class="done">module.exports = {
+ // ...
+    module: {
+    rules: [
+    // шрифты и SVG</span>
+                {
+                    test: /\.(scss|css)$/,
+                    use: ['style-loader', 'css-loader', 'sass-loader'],  <span class="warning">//(если вы используете windows7, строку 'sass-loader' удалите.)</span>
+                }
+<span class="done"> 
+    ],
+}</span>
+</strong>
+</div>
+
+
+
+<p>Для проверки работоспособности названных инструментов создадим файл «src/styles/main.scss».<span class="warning">(если вы используете windows7, создайте файл вместо main.scss конкретно main.css (без расширения scss).)</span></p>
+
+
+<p>Импортируем этот файл в index.js и добавляем 4 загрузчика.</p>
+
+<strong class="comment">// index.js</strong>
+<div class="code">
+    <strong> 
+import './styles/main.scss'
+</strong>
+</div>
+
+<h4>Разработка</h4>
+<p>webpack-dev-server — это сервер для разработки</p>
+<strong>npm i -D webpack-dev-server</strong><br>
+<strong class="comment">// webpack.config.js</strong>
+<div class="code">
+    <strong> 
+<span class="done">const { CleanWebpackPlugin } = require('clean-webpack-plugin')</span>
+const webpack = require('webpack')
+
+<span class="done">module.exports = { // ...</span>
+ mode: 'development',
+  devServer: {
+    historyApiFallback: true,
+    //contentBase: path.resolve(__dirname, 'dist'),
+    static: './dist',
+    open: true, compress: true, hot: true, port: 8080,
+  },
+<span class="done">}</span>
+
+</strong>
+</div>
+
+
+<p>Для запуска сервера используется команда «webpack serve»:</p>
+
+<strong class="comment">// package.json</strong>
+
+<div class="code">
+    <strong> 
+"scripts": { "start": "webpack serve" }
+</strong>
+</div>
+
+
+<strong>npm run start</strong>
+
+
+    </div>
+  
+
+
+</body>
+</html>
